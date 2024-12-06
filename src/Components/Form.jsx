@@ -53,7 +53,7 @@ const Form = () => {
           <h4>Gracias {user.nombreCompleto}, te contactaremos cuanto antes vía mail</h4>
         </>
       ) : (
-          <form onSubmit={handleSubmit}>
+          <form noValidate onSubmit={handleSubmit}>
           <label>Nombre Completo:</label>
           <input
             type="text"
