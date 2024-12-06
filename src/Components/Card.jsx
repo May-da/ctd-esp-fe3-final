@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { useCharsState } from "../Context/context";
 
 const Card = ({ name, username, id, char }) => {
-  const {setFavs} = useCharsState();
+
+  const {dispatch} = useCharsState();
   const addFav = ()=>{
-    setFavs((favs) => [...favs, char]);
+    dispatch({type: "ADD_FAV", payload: char});
       }
 
   return (

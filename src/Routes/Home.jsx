@@ -6,10 +6,9 @@ import { useCharsState } from '../Context/context';
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  const {chars, changeTheme, theme} = useCharsState();
-  // const {
-  //   state: { chars },
-  // } = useCharsState();
+  const {
+    state: {chars}
+  } = useCharsState();
      
 
   return (

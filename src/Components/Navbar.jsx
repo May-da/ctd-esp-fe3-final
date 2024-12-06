@@ -7,14 +7,21 @@ import { routes } from "../Config/routes"
 import { useCharsState } from "../Context/context";
 
 const Navbar = () => {
-  const { theme, changeTheme } = useCharsState();
+  const { 
+    state: {theme}, dispatch 
+  } = useCharsState();
+
+  const handleTheme = () => {
+    dispatch({ type: "TOGGLE_THEME" });
+  }
+    
 
   return (
     <nav className= {theme === "dark" ? "dark" : ""}>
       
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={changeTheme}>Change theme </button>
+      <button onClick={handleTheme}>Change theme </button>
       <Link to={routes.home}>
         <h4>Home</h4>
       </Link>

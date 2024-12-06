@@ -4,10 +4,9 @@ import { useCharsState } from "../Context/context";
 
 const Favs = () => {
 
-  const {favs} = useCharsState();
-//  const {
-//   state: { favs },
-// } = useCharsState();
+ const {
+  state: { favs },
+} = useCharsState();
   return (
     <>
       <h1>Dentists Favs</h1>

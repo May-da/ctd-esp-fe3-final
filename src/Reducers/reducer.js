@@ -8,7 +8,7 @@ export const reducer = (state, action) => {
         const filterFavs = state.favs.filter((fav) => fav.id !== action.payload.id);
         return { ...state, favs: filterFavs };
       case "TOGGLE_THEME":
-        return { ...state, theme: "acá puede un ternario" };
+        return { ...state, theme: state.theme === "dark" ? "light" : "dark", };
     }
 };
 

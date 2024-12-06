@@ -7,9 +7,18 @@ import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
 import { routes } from "./Config/routes";
+import { useEffect } from "react";
+import { useCharsState } from "./Context/context";
 
 
 function App() {
+  const { 
+    state: {theme} 
+  } = useCharsState(); 
+
+  useEffect(() => {
+    document.body.className = theme === "dark" ? "dark" : "";
+  }, [theme]);
   return (
       <div className="App">
           <Navbar/>
